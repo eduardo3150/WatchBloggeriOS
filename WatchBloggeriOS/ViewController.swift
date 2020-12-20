@@ -1,10 +1,3 @@
-//
-//  ViewController.swift
-//  WatchBloggeriOS
-//
-//  Created by Eduardo Chavez on 12/18/20.
-//
-
 import UIKit
 
 class ViewController: UIViewController {
@@ -13,7 +6,4 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
-
 }
-
