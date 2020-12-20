@@ -8,6 +8,7 @@ target 'WatchBloggeriOS' do
   pod 'Swinject'
   pod 'SwinjectStoryboard', :git => 'https://github.com/Swinject/SwinjectStoryboard.git', :branch => 'master', :inhibit_warnings => true
   pod 'SwinjectAutoregistration', '2.7.0'
+  pod 'Alamofire', '~> 5.2'
 
   # Pods for WatchBloggeriOS
 
@@ -19,10 +20,6 @@ target 'WatchBloggeriOS' do
     pod 'Nimble'
     pod 'Spry', :git => 'https://github.com/NikSativa/Spry.git', :branch => 'master', :inhibit_warnings => true
     pod 'Spry+Nimble'
-  end
-
-  target 'WatchBloggeriOSUITests' do
-    # Pods for testing
   end
 
 end
