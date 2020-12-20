@@ -9,6 +9,7 @@ target 'WatchBloggeriOS' do
   pod 'SwinjectStoryboard', :git => 'https://github.com/Swinject/SwinjectStoryboard.git', :branch => 'master', :inhibit_warnings => true
   pod 'SwinjectAutoregistration', '2.7.0'
   pod 'Alamofire', '~> 5.2'
+  pod 'RealmSwift'
 
   # Pods for WatchBloggeriOS
 

@@ -6,10 +6,5 @@ protocol UserArticlesProviderProtocol {
     func updateArticle(updatedData: UserArticle)
     func deleteArticle(with id: String)
     func getArticle(by id: String) -> UserArticle
-}
-
-struct UserArticle {
-    let title: String
-    let content: String
-    let image: String?
+    func seedFakeData()
 }

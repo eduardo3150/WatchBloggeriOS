@@ -1,14 +1,32 @@
 import Foundation
+import RealmSwift
 
 class UserArticleProvider: UserArticlesProviderProtocol {
-    let articles = [UserArticle(title: "One", content: "Hi", image: nil)]
 
     func getAllStoredArticles() -> [UserArticle] {
-        return articles
+        do {
+            // Get the default Realm
+            let realm = try Realm()
+            // You only need to do this once (per thread)
+            let result =  realm.objects(UserArticle.self)
+            return Array(result)
+        } catch let error {
+            print("error \(error)")
+        }
+        return []
     }
 
     func saveArticle(data: UserArticle) {
-        // No OP
+        do {
+            // Get the default Realm
+            let realm = try Realm()
+            // You only need to do this once (per thread)
+            try realm.write {
+                realm.add(data)
+            }
+        } catch let error {
+            print("error \(error)")
+        }
     }
 
     func updateArticle(updatedData: UserArticle) {
@@ -20,6 +38,30 @@ class UserArticleProvider: UserArticlesProviderProtocol {
     }
 
     func getArticle(by id: String) -> UserArticle {
-        return articles[0]
+        do {
+            // Get the default Realm
+            let realm = try Realm()
+            // You only need to do this once (per thread)
+            let result =  realm.objects(UserArticle.self).filter("id = \(id)")
+//            let result2 = realm.object(ofType: UserArticle.self, forPrimaryKey: id)
+            return result.first!
+        } catch let error {
+            print("error \(error)")
+        }
+        return UserArticle()
+    }
+
+    func seedFakeData() {
+        let article = UserArticle()
+        article.id = 0
+        article.title = "Article 1"
+        article.content = "This is a description"
+        self.saveArticle(data: article)
+
+        let article2 = UserArticle()
+        article2.id = 1
+        article2.title = "Article 2"
+        article2.content = "This is another description"
+        self.saveArticle(data: article2)
     }
 }
