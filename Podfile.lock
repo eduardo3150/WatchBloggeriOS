@@ -1,30 +1,63 @@
 PODS:
+  - Nimble (9.0.0)
+  - Quick (3.0.0)
+  - Spry (3.3.0)
+  - "Spry+Nimble (2.1)":
+    - Nimble
+    - Spry
   - SwiftLint (0.40.3)
   - Swinject (2.7.1)
   - SwinjectAutoregistration (2.7.0):
     - Swinject (~> 2.7)
   - SwinjectStoryboard (2.2.0):
-    - Swinject (~> 2.6)
+    - Swinject (~> 2.7.1)
 
 DEPENDENCIES:
+  - Nimble
+  - Quick
+  - Spry (from `https://github.com/NikSativa/Spry.git`, branch `master`)
+  - "Spry+Nimble"
   - SwiftLint
   - Swinject
+  - SwinjectAutoregistration
   - SwinjectAutoregistration (= 2.7.0)
-  - SwinjectStoryboard
+  - SwinjectStoryboard (from `https://github.com/Swinject/SwinjectStoryboard.git`, branch `master`)
 
 SPEC REPOS:
   trunk:
+    - Nimble
+    - Quick
+    - "Spry+Nimble"
     - SwiftLint
     - Swinject
     - SwinjectAutoregistration
-    - SwinjectStoryboard
+
+EXTERNAL SOURCES:
+  Spry:
+    :branch: master
+    :git: https://github.com/NikSativa/Spry.git
+  SwinjectStoryboard:
+    :branch: master
+    :git: https://github.com/Swinject/SwinjectStoryboard.git
+
+CHECKOUT OPTIONS:
+  Spry:
+    :commit: e1ee8fa5f9a97eda484a289e8f4b2e17cadb7ab5
+    :git: https://github.com/NikSativa/Spry.git
+  SwinjectStoryboard:
+    :commit: 0ca45c83a8aa398c153d8a036c95abb4343cfa0c
+    :git: https://github.com/Swinject/SwinjectStoryboard.git
 
 SPEC CHECKSUMS:
+  Nimble: 3b4ec3fd40f1dc178058e0981107721c615643d8
+  Quick: 6d9559f40647bc4d510103842ef2fdd882d753e2
+  Spry: 61f21431d818ccc268999e2ed6bc54e92bc6d61d
+  "Spry+Nimble": c7475df3fcdfc59e7ab38ab9f4abfcfc0910a375
   SwiftLint: dfd554ff0dff17288ee574814ccdd5cea85d76f7
   Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
   SwinjectAutoregistration: 330f5012642a8b5c89a8a4adb0c5e52df07382c0
-  SwinjectStoryboard: 32512ef16c2b0ff5b8f823b23539c4a50f6d3383
+  SwinjectStoryboard: f0d5b1c16459949d6ff1cbb6610107946b18e1f8
 
-PODFILE CHECKSUM: a3a8cb8c0c313434783233a8ee70100bc807fdd5
+PODFILE CHECKSUM: 609bce99716997c7b93a0bb2af89a4029f3c5270
 
 COCOAPODS: 1.10.0

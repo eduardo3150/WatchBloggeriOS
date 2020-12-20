@@ -16,7 +16,7 @@
 		7EF17F80E8CAAB4C93A6B13A /* Pods_WatchBloggeriOS_WatchBloggeriOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E801C0EBFBA021EDC2772B4B /* Pods_WatchBloggeriOS_WatchBloggeriOSUITests.framework */; };
 		70A72B20258CFDAC00A37450 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A72B1F258CFDAC00A37450 /* SceneDelegate.swift */; };
 		70A72B22258CFDAC00A37450 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A72B21258CFDAC00A37450 /* ViewController.swift */; };
-		70A72B35258CFDAF00A37450 /* WatchBloggeriOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A72B34258CFDAF00A37450 /* WatchBloggeriOSTests.swift */; };
+		706B4D26258F511A004D9DD0 /* ViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706B4D25258F511A004D9DD0 /* ViewControllerSpec.swift */; };
 		70A72B40258CFDAF00A37450 /* WatchBloggeriOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A72B3F258CFDAF00A37450 /* WatchBloggeriOSUITests.swift */; };
 /* End PBXBuildFile section */
 
@@ -56,8 +56,8 @@
 		E801C0EBFBA021EDC2772B4B /* Pods_WatchBloggeriOS_WatchBloggeriOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WatchBloggeriOS_WatchBloggeriOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		70A72B1F258CFDAC00A37450 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		70A72B21258CFDAC00A37450 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		706B4D25258F511A004D9DD0 /* ViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerSpec.swift; sourceTree = "<group>"; };
 		70A72B1A258CFDAC00A37450 /* WatchBloggeriOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatchBloggeriOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		70A72B34258CFDAF00A37450 /* WatchBloggeriOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchBloggeriOSTests.swift; sourceTree = "<group>"; };
 		70A72B30258CFDAF00A37450 /* WatchBloggeriOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WatchBloggeriOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		70A72B3F258CFDAF00A37450 /* WatchBloggeriOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchBloggeriOSUITests.swift; sourceTree = "<group>"; };
 		70A72B3B258CFDAF00A37450 /* WatchBloggeriOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WatchBloggeriOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -144,7 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				70A72B36258CFDAF00A37450 /* Info.plist */,
-				70A72B34258CFDAF00A37450 /* WatchBloggeriOSTests.swift */,
+				706B4D25258F511A004D9DD0 /* ViewControllerSpec.swift */,
 			);
 			path = WatchBloggeriOSTests;
 			sourceTree = "<group>";
@@ -199,6 +199,7 @@
 				70A72B2C258CFDAF00A37450 /* Sources */,
 				70A72B2D258CFDAF00A37450 /* Frameworks */,
 				70A72B2E258CFDAF00A37450 /* Resources */,
+				056DC6055297041F58A90EA7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -300,6 +301,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		056DC6055297041F58A90EA7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WatchBloggeriOSTests/Pods-WatchBloggeriOSTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WatchBloggeriOSTests/Pods-WatchBloggeriOSTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WatchBloggeriOSTests/Pods-WatchBloggeriOSTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		3165802AF31CCC601240D3A3 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -434,7 +452,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				70A72B35258CFDAF00A37450 /* WatchBloggeriOSTests.swift in Sources */,
+				706B4D26258F511A004D9DD0 /* ViewControllerSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

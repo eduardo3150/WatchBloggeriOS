@@ -6,14 +6,19 @@ target 'WatchBloggeriOS' do
   use_frameworks!
   pod 'SwiftLint'
   pod 'Swinject'
-  pod 'SwinjectStoryboard'
+  pod 'SwinjectStoryboard', :git => 'https://github.com/Swinject/SwinjectStoryboard.git', :branch => 'master', :inhibit_warnings => true
   pod 'SwinjectAutoregistration', '2.7.0'
 
   # Pods for WatchBloggeriOS
 
   target 'WatchBloggeriOSTests' do
     inherit! :search_paths
-    # Pods for testing
+    pod 'Swinject'
+    pod 'SwinjectAutoregistration'
+    pod 'Quick'
+    pod 'Nimble'
+    pod 'Spry', :git => 'https://github.com/NikSativa/Spry.git', :branch => 'master', :inhibit_warnings => true
+    pod 'Spry+Nimble'
   end
 
   target 'WatchBloggeriOSUITests' do
