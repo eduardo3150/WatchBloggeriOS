@@ -3,7 +3,7 @@ import Alamofire
 
 class ApiProvider: ApiProviderProtocol {
 
-    static let BASE_URL = "https://newsapi.org/v2/"
+    static let BASE_URL = "https://newsapi.org/v2"
     static let API_KEY = "fabd60c0bee54a74bd4622c1d0534c41"
 
     let apiKeyQueryItem = URLQueryItem(name: "apiKey", value: ApiProvider.API_KEY)
@@ -20,16 +20,16 @@ class ApiProvider: ApiProviderProtocol {
         pageSize: String = "20"
     ) -> DataResponsePublisher<WatchArticleResponse> {
         let queryItem = URLQueryItem(name: "q", value: query)
-        let fromItem = URLQueryItem(name: "from", value: query)
-        let sortByItem = URLQueryItem(name: "sortBy", value: query)
-        let languageItem = URLQueryItem(name: "language", value: query)
-        let pageSizeItem = URLQueryItem(name: "pageSize", value: query)
+        let fromItem = URLQueryItem(name: "from", value: from)
+        let sortByItem = URLQueryItem(name: "sortBy", value: sortBy)
+        let languageItem = URLQueryItem(name: "language", value: language)
+        let pageSizeItem = URLQueryItem(name: "pageSize", value: pageSize)
 
-        let queryItems = [queryItem, fromItem, sortByItem, languageItem, pageSizeItem]
-        var urlComps = URLComponents(string: ApiProvider.BASE_URL)!
+        let queryItems = [apiKeyQueryItem, queryItem, fromItem, sortByItem, languageItem, pageSizeItem]
+        var urlComps = URLComponents(string: "\(ApiProvider.BASE_URL)/everything")!
         urlComps.queryItems = queryItems
 
-        return AF.request(urlComps, method: .get)
+        return AF.request(urlComps.url!, method: .get)
             .validate(statusCode: 200..<300)
             .publishDecodable(type: WatchArticleResponse.self)
     }

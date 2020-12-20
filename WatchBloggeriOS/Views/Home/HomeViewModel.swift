@@ -11,7 +11,7 @@ class HomeViewModel: HomeViewModelProtocol {
 
     @Published private var articlesResponse = WatchArticleResponse(
         status: "",
-        totalResults: "",
+        totalResults: 0,
         articles: []
     )
 
@@ -25,7 +25,7 @@ class HomeViewModel: HomeViewModelProtocol {
 
     func getWatchArticles() {
          apiProvider
-            .getWatchArticles(from: "")
+            .getWatchArticles(from: "2020-12-17")
             .result()
             .sink { [weak self] response in
                 switch response {
