@@ -6,7 +6,7 @@ class HomeViewController: UIViewController {
 
     var viewModel: HomeViewModelProtocol?
     var cancellables: Set<AnyCancellable> = []
-    let articlesDataSource = ArticlesDataSource()
+    let articlesDataSource = ArticlesTableDataManager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
