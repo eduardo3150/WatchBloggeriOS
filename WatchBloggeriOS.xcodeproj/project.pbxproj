@@ -7,17 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7085F7D2258FBE8900C74FFA /* ApiProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7085F7D0258FBE8800C74FFA /* ApiProvider.swift */; };
+		7085F7D3258FBE8900C74FFA /* ApiProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7085F7D1258FBE8900C74FFA /* ApiProviderProtocol.swift */; };
 		70A72B1E258CFDAC00A37450 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A72B1D258CFDAC00A37450 /* AppDelegate.swift */; };
 		70A72B27258CFDAE00A37450 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70A72B26258CFDAE00A37450 /* Assets.xcassets */; };
+		70A72B22258CFDAC00A37450 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A72B21258CFDAC00A37450 /* HomeViewController.swift */; };
+		7085F7C8258FBD8800C74FFA /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7085F7C7258FBD8800C74FFA /* HomeViewModel.swift */; };
 		70A72B2A258CFDAE00A37450 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70A72B28258CFDAE00A37450 /* LaunchScreen.storyboard */; };
 		70A72B25258CFDAC00A37450 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70A72B23258CFDAC00A37450 /* Main.storyboard */; };
 		E2937BAA781F744D3C4B4128 /* Pods_WatchBloggeriOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63ADF37407BE280BD377C317 /* Pods_WatchBloggeriOS.framework */; };
 		64900F488BF2F5F291EA96FD /* Pods_WatchBloggeriOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9A62EF530D209768A1F1AA3 /* Pods_WatchBloggeriOSTests.framework */; };
-		7EF17F80E8CAAB4C93A6B13A /* Pods_WatchBloggeriOS_WatchBloggeriOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E801C0EBFBA021EDC2772B4B /* Pods_WatchBloggeriOS_WatchBloggeriOSUITests.framework */; };
 		70A72B20258CFDAC00A37450 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A72B1F258CFDAC00A37450 /* SceneDelegate.swift */; };
-		70A72B22258CFDAC00A37450 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A72B21258CFDAC00A37450 /* ViewController.swift */; };
+		7085F7C2258FBD3400C74FFA /* SwinjectStoryboard+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7085F7C1258FBD3400C74FFA /* SwinjectStoryboard+Extension.swift */; };
 		706B4D26258F511A004D9DD0 /* ViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706B4D25258F511A004D9DD0 /* ViewControllerSpec.swift */; };
-		70A72B40258CFDAF00A37450 /* WatchBloggeriOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A72B3F258CFDAF00A37450 /* WatchBloggeriOSUITests.swift */; };
+		7085F7BD258FBCC900C74FFA /* WatchArticles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7085F7BC258FBCC900C74FFA /* WatchArticles.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,23 +31,19 @@
 			remoteGlobalIDString = 70A72B19258CFDAC00A37450;
 			remoteInfo = WatchBloggeriOS;
 		};
-		70A72B3C258CFDAF00A37450 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 70A72B12258CFDAB00A37450 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 70A72B19258CFDAC00A37450;
-			remoteInfo = WatchBloggeriOS;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7085F7D0258FBE8800C74FFA /* ApiProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiProvider.swift; sourceTree = "<group>"; };
+		7085F7D1258FBE8900C74FFA /* ApiProviderProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiProviderProtocol.swift; sourceTree = "<group>"; };
 		70A72B1D258CFDAC00A37450 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		70A72B26258CFDAE00A37450 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		70A72B24258CFDAC00A37450 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		70A72B29258CFDAE00A37450 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		70A72B21258CFDAC00A37450 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		7085F7C7258FBD8800C74FFA /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		70A72B2B258CFDAE00A37450 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70A72B36258CFDAF00A37450 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		70A72B41258CFDAF00A37450 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20C0F60483D37F121E788F0A /* Pods-WatchBloggeriOS-WatchBloggeriOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatchBloggeriOS-WatchBloggeriOSUITests.debug.xcconfig"; path = "Target Support Files/Pods-WatchBloggeriOS-WatchBloggeriOSUITests/Pods-WatchBloggeriOS-WatchBloggeriOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		9173275743AABA7132176F28 /* Pods-WatchBloggeriOS-WatchBloggeriOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatchBloggeriOS-WatchBloggeriOSUITests.release.xcconfig"; path = "Target Support Files/Pods-WatchBloggeriOS-WatchBloggeriOSUITests/Pods-WatchBloggeriOS-WatchBloggeriOSUITests.release.xcconfig"; sourceTree = "<group>"; };
 		62119E6573A6FB1FF038307F /* Pods-WatchBloggeriOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatchBloggeriOS.debug.xcconfig"; path = "Target Support Files/Pods-WatchBloggeriOS/Pods-WatchBloggeriOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -55,12 +54,11 @@
 		E9A62EF530D209768A1F1AA3 /* Pods_WatchBloggeriOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WatchBloggeriOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E801C0EBFBA021EDC2772B4B /* Pods_WatchBloggeriOS_WatchBloggeriOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WatchBloggeriOS_WatchBloggeriOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		70A72B1F258CFDAC00A37450 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		70A72B21258CFDAC00A37450 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7085F7C1258FBD3400C74FFA /* SwinjectStoryboard+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwinjectStoryboard+Extension.swift"; sourceTree = "<group>"; };
 		706B4D25258F511A004D9DD0 /* ViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerSpec.swift; sourceTree = "<group>"; };
+		7085F7BC258FBCC900C74FFA /* WatchArticles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchArticles.swift; sourceTree = "<group>"; };
 		70A72B1A258CFDAC00A37450 /* WatchBloggeriOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatchBloggeriOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70A72B30258CFDAF00A37450 /* WatchBloggeriOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WatchBloggeriOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		70A72B3F258CFDAF00A37450 /* WatchBloggeriOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchBloggeriOSUITests.swift; sourceTree = "<group>"; };
-		70A72B3B258CFDAF00A37450 /* WatchBloggeriOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WatchBloggeriOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,14 +78,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		70A72B38258CFDAF00A37450 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7EF17F80E8CAAB4C93A6B13A /* Pods_WatchBloggeriOS_WatchBloggeriOSUITests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -104,6 +94,48 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		7085F7C0258FBD1D00C74FFA /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				7085F7C1258FBD3400C74FFA /* SwinjectStoryboard+Extension.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		7085F7C5258FBD5D00C74FFA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7085F7C6258FBD6D00C74FFA /* Home */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7085F7C6258FBD6D00C74FFA /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				70A72B21258CFDAC00A37450 /* HomeViewController.swift */,
+				7085F7C7258FBD8800C74FFA /* HomeViewModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		7085F7CF258FBE6F00C74FFA /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				7085F7D0258FBE8800C74FFA /* ApiProvider.swift */,
+				7085F7D1258FBE8900C74FFA /* ApiProviderProtocol.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		7085F7D6258FC5C400C74FFA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7085F7BC258FBCC900C74FFA /* WatchArticles.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		70A72B11258CFDAB00A37450 = {
 			isa = PBXGroup;
 			children = (
@@ -112,7 +144,6 @@
 				70A72B1B258CFDAC00A37450 /* Products */,
 				70A72B1C258CFDAC00A37450 /* WatchBloggeriOS */,
 				70A72B33258CFDAF00A37450 /* WatchBloggeriOSTests */,
-				70A72B3E258CFDAF00A37450 /* WatchBloggeriOSUITests */,
 			);
 			sourceTree = "<group>";
 		};
@@ -121,7 +152,6 @@
 			children = (
 				70A72B1A258CFDAC00A37450 /* WatchBloggeriOS.app */,
 				70A72B30258CFDAF00A37450 /* WatchBloggeriOSTests.xctest */,
-				70A72B3B258CFDAF00A37450 /* WatchBloggeriOSUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -129,13 +159,16 @@
 		70A72B1C258CFDAC00A37450 /* WatchBloggeriOS */ = {
 			isa = PBXGroup;
 			children = (
+				7085F7C0258FBD1D00C74FFA /* DI */,
+				7085F7D6258FC5C400C74FFA /* Models */,
+				7085F7CF258FBE6F00C74FFA /* Repository */,
+				7085F7C5258FBD5D00C74FFA /* Views */,
 				70A72B1D258CFDAC00A37450 /* AppDelegate.swift */,
 				70A72B26258CFDAE00A37450 /* Assets.xcassets */,
 				70A72B2B258CFDAE00A37450 /* Info.plist */,
 				70A72B28258CFDAE00A37450 /* LaunchScreen.storyboard */,
 				70A72B23258CFDAC00A37450 /* Main.storyboard */,
 				70A72B1F258CFDAC00A37450 /* SceneDelegate.swift */,
-				70A72B21258CFDAC00A37450 /* ViewController.swift */,
 			);
 			path = WatchBloggeriOS;
 			sourceTree = "<group>";
@@ -147,15 +180,6 @@
 				706B4D25258F511A004D9DD0 /* ViewControllerSpec.swift */,
 			);
 			path = WatchBloggeriOSTests;
-			sourceTree = "<group>";
-		};
-		70A72B3E258CFDAF00A37450 /* WatchBloggeriOSUITests */ = {
-			isa = PBXGroup;
-			children = (
-				70A72B41258CFDAF00A37450 /* Info.plist */,
-				70A72B3F258CFDAF00A37450 /* WatchBloggeriOSUITests.swift */,
-			);
-			path = WatchBloggeriOSUITests;
 			sourceTree = "<group>";
 		};
 		C21CFF01E704ADA973C61E77 /* Frameworks */ = {
@@ -211,26 +235,6 @@
 			productReference = 70A72B30258CFDAF00A37450 /* WatchBloggeriOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		70A72B3A258CFDAF00A37450 /* WatchBloggeriOSUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 70A72B4A258CFDAF00A37450 /* Build configuration list for PBXNativeTarget "WatchBloggeriOSUITests" */;
-			buildPhases = (
-				51754E738F1AE0E37621C19D /* [CP] Check Pods Manifest.lock */,
-				70A72B37258CFDAF00A37450 /* Sources */,
-				70A72B38258CFDAF00A37450 /* Frameworks */,
-				70A72B39258CFDAF00A37450 /* Resources */,
-				3165802AF31CCC601240D3A3 /* [CP] Embed Pods Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				70A72B3D258CFDAF00A37450 /* PBXTargetDependency */,
-			);
-			name = WatchBloggeriOSUITests;
-			productName = WatchBloggeriOSUITests;
-			productReference = 70A72B3B258CFDAF00A37450 /* WatchBloggeriOSUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -244,10 +248,6 @@
 						CreatedOnToolsVersion = 12.3;
 					};
 					70A72B2F258CFDAF00A37450 = {
-						CreatedOnToolsVersion = 12.3;
-						TestTargetID = 70A72B19258CFDAC00A37450;
-					};
-					70A72B3A258CFDAF00A37450 = {
 						CreatedOnToolsVersion = 12.3;
 						TestTargetID = 70A72B19258CFDAC00A37450;
 					};
@@ -268,7 +268,6 @@
 			targets = (
 				70A72B19258CFDAC00A37450 /* WatchBloggeriOS */,
 				70A72B2F258CFDAF00A37450 /* WatchBloggeriOSTests */,
-				70A72B3A258CFDAF00A37450 /* WatchBloggeriOSUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -285,13 +284,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		70A72B2E258CFDAF00A37450 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		70A72B39258CFDAF00A37450 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -316,45 +308,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WatchBloggeriOSTests/Pods-WatchBloggeriOSTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		3165802AF31CCC601240D3A3 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WatchBloggeriOS-WatchBloggeriOSUITests/Pods-WatchBloggeriOS-WatchBloggeriOSUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WatchBloggeriOS-WatchBloggeriOSUITests/Pods-WatchBloggeriOS-WatchBloggeriOSUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WatchBloggeriOS-WatchBloggeriOSUITests/Pods-WatchBloggeriOS-WatchBloggeriOSUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		51754E738F1AE0E37621C19D /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-WatchBloggeriOS-WatchBloggeriOSUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		706B4D07258D1054004D9DD0 /* ShellScript */ = {
@@ -442,9 +395,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7085F7D2258FBE8900C74FFA /* ApiProvider.swift in Sources */,
+				7085F7D3258FBE8900C74FFA /* ApiProviderProtocol.swift in Sources */,
 				70A72B1E258CFDAC00A37450 /* AppDelegate.swift in Sources */,
+				70A72B22258CFDAC00A37450 /* HomeViewController.swift in Sources */,
+				7085F7C8258FBD8800C74FFA /* HomeViewModel.swift in Sources */,
 				70A72B20258CFDAC00A37450 /* SceneDelegate.swift in Sources */,
-				70A72B22258CFDAC00A37450 /* ViewController.swift in Sources */,
+				7085F7C2258FBD3400C74FFA /* SwinjectStoryboard+Extension.swift in Sources */,
+				7085F7BD258FBCC900C74FFA /* WatchArticles.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,14 +414,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		70A72B37258CFDAF00A37450 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				70A72B40258CFDAF00A37450 /* WatchBloggeriOSUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -471,11 +421,6 @@
 			isa = PBXTargetDependency;
 			target = 70A72B19258CFDAC00A37450 /* WatchBloggeriOS */;
 			targetProxy = 70A72B31258CFDAF00A37450 /* PBXContainerItemProxy */;
-		};
-		70A72B3D258CFDAF00A37450 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 70A72B19258CFDAC00A37450 /* WatchBloggeriOS */;
-			targetProxy = 70A72B3C258CFDAF00A37450 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -701,48 +646,6 @@
 			};
 			name = Release;
 		};
-		70A72B4B258CFDAF00A37450 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 20C0F60483D37F121E788F0A /* Pods-WatchBloggeriOS-WatchBloggeriOSUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = SV8UVMH5Y8;
-				INFOPLIST_FILE = WatchBloggeriOSUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = fireland.WatchBloggeriOSUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = WatchBloggeriOS;
-			};
-			name = Debug;
-		};
-		70A72B4C258CFDAF00A37450 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9173275743AABA7132176F28 /* Pods-WatchBloggeriOS-WatchBloggeriOSUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = SV8UVMH5Y8;
-				INFOPLIST_FILE = WatchBloggeriOSUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = fireland.WatchBloggeriOSUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = WatchBloggeriOS;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -769,15 +672,6 @@
 			buildConfigurations = (
 				70A72B48258CFDAF00A37450 /* Debug */,
 				70A72B49258CFDAF00A37450 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		70A72B4A258CFDAF00A37450 /* Build configuration list for PBXNativeTarget "WatchBloggeriOSUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				70A72B4B258CFDAF00A37450 /* Debug */,
-				70A72B4C258CFDAF00A37450 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

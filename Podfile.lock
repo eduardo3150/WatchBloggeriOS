@@ -1,4 +1,5 @@
 PODS:
+  - Alamofire (5.2.2)
   - Nimble (9.0.0)
   - Quick (3.0.0)
   - Spry (3.3.0)
@@ -13,6 +14,7 @@ PODS:
     - Swinject (~> 2.7.1)
 
 DEPENDENCIES:
+  - Alamofire (~> 5.2)
   - Nimble
   - Quick
   - Spry (from `https://github.com/NikSativa/Spry.git`, branch `master`)
@@ -25,6 +27,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - Alamofire
     - Nimble
     - Quick
     - "Spry+Nimble"
@@ -49,6 +52,7 @@ CHECKOUT OPTIONS:
     :git: https://github.com/Swinject/SwinjectStoryboard.git
 
 SPEC CHECKSUMS:
+  Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
   Nimble: 3b4ec3fd40f1dc178058e0981107721c615643d8
   Quick: 6d9559f40647bc4d510103842ef2fdd882d753e2
   Spry: 61f21431d818ccc268999e2ed6bc54e92bc6d61d
@@ -58,6 +62,6 @@ SPEC CHECKSUMS:
   SwinjectAutoregistration: 330f5012642a8b5c89a8a4adb0c5e52df07382c0
   SwinjectStoryboard: f0d5b1c16459949d6ff1cbb6610107946b18e1f8
 
-PODFILE CHECKSUM: 609bce99716997c7b93a0bb2af89a4029f3c5270
+PODFILE CHECKSUM: bad6e91a54105b7368303341b5c07377d0539618
 
 COCOAPODS: 1.10.0
