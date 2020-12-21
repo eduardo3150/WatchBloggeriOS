@@ -30,7 +30,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="s2C-ne-fw6" secondAttribute="bottom" id="aiu-pQ-mvA"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="HMl-mK-fMU"/>
+                    <tabBarItem key="tabBarItem" title="Watches Articles" image="applewatch.watchface" catalog="system" id="HMl-mK-fMU"/>
                     <connections>
                         <outlet property="articlesTableView" destination="s2C-ne-fw6" id="jO8-Rs-pWz"/>
                     </connections>
@@ -90,11 +90,11 @@
             </objects>
             <point key="canvasLocation" x="34.782608695652179" y="124.55357142857142"/>
         </scene>
-        <!--Item-->
+        <!--User Articles-->
         <scene sceneID="Uom-8y-G8M">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="M2I-68-Xar" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="6m4-Lh-dyM"/>
+                    <tabBarItem key="tabBarItem" title="User Articles" image="star.fill" catalog="system" id="6m4-Lh-dyM"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="5rv-1u-Jed">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -144,6 +144,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="applewatch.watchface" catalog="system" width="114" height="128"/>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

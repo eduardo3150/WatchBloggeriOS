@@ -13,6 +13,13 @@ class HomeViewController: UIViewController {
         // Do any additional setup after loading the view.
         articlesTableView.delegate = articlesDataSource
         articlesTableView.dataSource = articlesDataSource
+        articlesTableView.register(
+            UINib(
+                nibName: RemoteArticlesCell.kNibName,
+                bundle: nil
+            ),
+            forCellReuseIdentifier: RemoteArticlesCell.kCellIdentifier
+        )
 
         viewModel?.getWatchArticles()
 

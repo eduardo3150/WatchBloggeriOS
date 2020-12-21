@@ -10,6 +10,7 @@ target 'WatchBloggeriOS' do
   pod 'SwinjectAutoregistration', '2.7.0'
   pod 'Alamofire', '~> 5.2'
   pod 'RealmSwift'
+  pod 'SDWebImage', '~> 5.0'
 
   # Pods for WatchBloggeriOS
 

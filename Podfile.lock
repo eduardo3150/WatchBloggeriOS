@@ -7,6 +7,9 @@ PODS:
   - Realm/Headers (10.5.0)
   - RealmSwift (10.5.0):
     - Realm (= 10.5.0)
+  - SDWebImage (5.9.3):
+    - SDWebImage/Core (= 5.9.3)
+  - SDWebImage/Core (5.9.3)
   - Spry (3.3.0)
   - "Spry+Nimble (2.1)":
     - Nimble
@@ -23,6 +26,7 @@ DEPENDENCIES:
   - Nimble
   - Quick
   - RealmSwift
+  - SDWebImage (~> 5.0)
   - Spry (from `https://github.com/NikSativa/Spry.git`, branch `master`)
   - "Spry+Nimble"
   - SwiftLint
@@ -38,6 +42,7 @@ SPEC REPOS:
     - Quick
     - Realm
     - RealmSwift
+    - SDWebImage
     - "Spry+Nimble"
     - SwiftLint
     - Swinject
@@ -65,6 +70,7 @@ SPEC CHECKSUMS:
   Quick: 6d9559f40647bc4d510103842ef2fdd882d753e2
   Realm: e1c22c3d83b229afb70ebc10e1771c91e9542d12
   RealmSwift: 6fc078d9d3fd7e58c71bfdbb694e252462f112a5
+  SDWebImage: a31ee8e90a97303529e03fb0c333eae0eacb88e9
   Spry: 61f21431d818ccc268999e2ed6bc54e92bc6d61d
   "Spry+Nimble": c7475df3fcdfc59e7ab38ab9f4abfcfc0910a375
   SwiftLint: dfd554ff0dff17288ee574814ccdd5cea85d76f7
@@ -72,6 +78,6 @@ SPEC CHECKSUMS:
   SwinjectAutoregistration: 330f5012642a8b5c89a8a4adb0c5e52df07382c0
   SwinjectStoryboard: f0d5b1c16459949d6ff1cbb6610107946b18e1f8
 
-PODFILE CHECKSUM: c1f23a76bddc2e548e921a59726ffb8cd35c8a36
+PODFILE CHECKSUM: b641165d7646d2b9874d3a0efdd6b21c4035527c
 
 COCOAPODS: 1.10.0

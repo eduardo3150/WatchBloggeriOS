@@ -9,11 +9,14 @@ class ArticlesTableDataManager: NSObject, UITableViewDataSource, UITableViewDele
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "")
-        let currentItem = articlesList[indexPath.row]
-        cell.textLabel?.text = currentItem.title
-        cell.detailTextLabel?.text = currentItem.author
-        return cell
+        if let cell = tableView.dequeueReusableCell(
+            withIdentifier: RemoteArticlesCell.kCellIdentifier
+        ) as? RemoteArticlesCell {
+            let currentItem = articlesList[indexPath.row]
+            cell.configure(article: currentItem)
+            return cell
+        }
+        return UITableViewCell()
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
