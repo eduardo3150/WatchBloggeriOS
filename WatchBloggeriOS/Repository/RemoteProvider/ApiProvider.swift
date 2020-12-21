@@ -7,9 +7,10 @@ class ApiProvider: ApiProviderProtocol {
     static let API_KEY = "fabd60c0bee54a74bd4622c1d0534c41"
 
     let apiKeyQueryItem = URLQueryItem(name: "apiKey", value: ApiProvider.API_KEY)
+    var page = 1
 
-    func getWatchArticles(from: String) -> DataResponsePublisher<WatchArticleResponse> {
-        return self.getWatchArticlesFullRequest(from: from)
+    func getWatchArticles(from: String, with moreData: Bool) -> DataResponsePublisher<WatchArticleResponse> {
+        return self.getWatchArticlesFullRequest(from: from, moreData: moreData)
     }
 
     func getWatchArticlesFullRequest(
@@ -17,7 +18,8 @@ class ApiProvider: ApiProviderProtocol {
         from: String,
         sortBy: String = "popularity",
         language: String = "en",
-        pageSize: String = "20"
+        pageSize: String = "10",
+        moreData: Bool
     ) -> DataResponsePublisher<WatchArticleResponse> {
         let queryItem = URLQueryItem(name: "q", value: query)
         let fromItem = URLQueryItem(name: "from", value: from)
@@ -25,7 +27,13 @@ class ApiProvider: ApiProviderProtocol {
         let languageItem = URLQueryItem(name: "language", value: language)
         let pageSizeItem = URLQueryItem(name: "pageSize", value: pageSize)
 
-        let queryItems = [apiKeyQueryItem, queryItem, fromItem, sortByItem, languageItem, pageSizeItem]
+        if moreData {
+            page += page
+        } else {
+            page = 1
+        }
+        let pageQueryItem = URLQueryItem(name: "page", value: String(page))
+        let queryItems = [apiKeyQueryItem, queryItem, fromItem, sortByItem, languageItem, pageSizeItem, pageQueryItem]
         var urlComps = URLComponents(string: "\(ApiProvider.BASE_URL)/everything")!
         urlComps.queryItems = queryItems
 

@@ -21,6 +21,7 @@
 		70A72B25258CFDAC00A37450 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70A72B23258CFDAC00A37450 /* Main.storyboard */; };
 		E2937BAA781F744D3C4B4128 /* Pods_WatchBloggeriOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63ADF37407BE280BD377C317 /* Pods_WatchBloggeriOS.framework */; };
 		64900F488BF2F5F291EA96FD /* Pods_WatchBloggeriOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9A62EF530D209768A1F1AA3 /* Pods_WatchBloggeriOSTests.framework */; };
+		701EA1FB25910B9000AC48C2 /* RefreshControlExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701EA1FA25910B9000AC48C2 /* RefreshControlExtension.swift */; };
 		7085F7BD258FBCC900C74FFA /* RemoteArticles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7085F7BC258FBCC900C74FFA /* RemoteArticles.swift */; };
 		7062734E2591030B00D7CC52 /* RemoteArticlesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7062734C2591030B00D7CC52 /* RemoteArticlesCell.swift */; };
 		7062734F2591030B00D7CC52 /* RemoteArticlesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7062734D2591030B00D7CC52 /* RemoteArticlesCell.xib */; };
@@ -69,6 +70,7 @@
 		63ADF37407BE280BD377C317 /* Pods_WatchBloggeriOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WatchBloggeriOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9A62EF530D209768A1F1AA3 /* Pods_WatchBloggeriOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WatchBloggeriOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E801C0EBFBA021EDC2772B4B /* Pods_WatchBloggeriOS_WatchBloggeriOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WatchBloggeriOS_WatchBloggeriOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		701EA1FA25910B9000AC48C2 /* RefreshControlExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshControlExtension.swift; sourceTree = "<group>"; };
 		7085F7BC258FBCC900C74FFA /* RemoteArticles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteArticles.swift; sourceTree = "<group>"; };
 		7062734C2591030B00D7CC52 /* RemoteArticlesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteArticlesCell.swift; sourceTree = "<group>"; };
 		7062734D2591030B00D7CC52 /* RemoteArticlesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RemoteArticlesCell.xib; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 		70627346259102BD00D7CC52 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				701EA1FA25910B9000AC48C2 /* RefreshControlExtension.swift */,
 				706273092590D45000D7CC52 /* SegueHandler.swift */,
 			);
 			path = Helper;
@@ -521,6 +524,7 @@
 				70A72B22258CFDAC00A37450 /* HomeViewController.swift in Sources */,
 				7085F7C8258FBD8800C74FFA /* HomeViewModel.swift in Sources */,
 				706272D32590119D00D7CC52 /* LocalArticles.swift in Sources */,
+				701EA1FB25910B9000AC48C2 /* RefreshControlExtension.swift in Sources */,
 				7085F7BD258FBCC900C74FFA /* RemoteArticles.swift in Sources */,
 				7062734E2591030B00D7CC52 /* RemoteArticlesCell.swift in Sources */,
 				70A72B20258CFDAC00A37450 /* SceneDelegate.swift in Sources */,

@@ -2,7 +2,7 @@ import Foundation
 import Combine
 
 protocol HomeViewModelProtocol {
-    func getWatchArticles()
+    func getWatchArticles(with moreData: Bool)
     var articlesPublished: Published<WatchArticleResponse>.Publisher { get }
 }
 
@@ -23,9 +23,9 @@ class HomeViewModel: HomeViewModelProtocol {
         self.apiProvider = apiProvider
     }
 
-    func getWatchArticles() {
+    func getWatchArticles(with moreData: Bool) {
          apiProvider
-            .getWatchArticles(from: "2020-12-17")
+            .getWatchArticles(from: "2020-12-17", with: moreData)
             .result()
             .sink { [weak self] response in
                 switch response {
