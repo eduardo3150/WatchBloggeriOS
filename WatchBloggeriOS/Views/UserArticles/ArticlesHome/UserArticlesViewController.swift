@@ -14,12 +14,20 @@ class UserArticlesViewController: UIViewController {
         let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(routeToAddArticle))
 
         navigationItem.rightBarButtonItem = addButton
+        navigationItem.title = "User Articles"
 
         articlesTableManager.delegate = self
         userArticlesTableView.delegate = articlesTableManager
         userArticlesTableView.dataSource = articlesTableManager
 
-        articlesTableManager.setUserArticlesData(articles: viewModel!.getAllStoredArticles())
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if let storedArticles = viewModel?.getAllStoredArticles() {
+            articlesTableManager.setUserArticlesData(articles: storedArticles)
+            userArticlesTableView.reloadData()
+        }
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

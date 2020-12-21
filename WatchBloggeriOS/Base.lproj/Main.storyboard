@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="s2C-ne-fw6">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -30,14 +30,14 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="s2C-ne-fw6" secondAttribute="bottom" id="aiu-pQ-mvA"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Watches Articles" image="applewatch.watchface" catalog="system" id="HMl-mK-fMU"/>
+                    <navigationItem key="navigationItem" id="wb1-qR-2ev"/>
                     <connections>
                         <outlet property="articlesTableView" destination="s2C-ne-fw6" id="jO8-Rs-pWz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="944.92753623188412" y="124.55357142857142"/>
+            <point key="canvasLocation" x="1855.072463768116" y="124.55357142857142"/>
         </scene>
         <!--UserArticlesViewController-->
         <scene sceneID="TNI-oB-10P">
@@ -82,7 +82,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="evE-U1-TJD"/>
+                        <segue destination="y8F-on-C7a" kind="relationship" relationship="viewControllers" id="evE-U1-TJD"/>
                         <segue destination="M2I-68-Xar" kind="relationship" relationship="viewControllers" id="JZO-Nx-ugh"/>
                     </connections>
                 </tabBarController>
@@ -117,37 +117,145 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2eJ-VF-cor">
-                                <rect key="frame" x="76" y="126" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qaT-YX-Uaz">
-                                <rect key="frame" x="173" y="285" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="takePhoto:" destination="K6D-bW-65R" eventType="touchUpInside" id="zWD-cq-T2B"/>
-                                </connections>
-                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="eg: Why I love watches" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="huo-Y3-Tqy">
+                                <rect key="frame" x="16" y="161" width="382" height="35"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="oUR-Kk-IbH">
+                                <rect key="frame" x="16" y="248.5" width="382" height="471.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I like to keep track of time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dkr-b4-IT7">
+                                <rect key="frame" x="16" y="248.5" width="382" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Article" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zrl-WZ-7r1">
+                                <rect key="frame" x="16" y="104" width="382" height="41"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's on your mind?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gab-Qp-uuH">
+                                <rect key="frame" x="16" y="212" width="382" height="20.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <color key="textColor" systemColor="systemGrayColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="vo3-X1-E0l">
+                                <rect key="frame" x="16" y="736" width="382" height="45"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MXs-EC-Y0D">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="45"/>
+                                        <state key="normal" title="Edit"/>
+                                        <connections>
+                                            <action selector="editArticle:" destination="K6D-bW-65R" eventType="touchUpInside" id="kwe-YP-UmO"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tnt-iL-x6g">
+                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="45"/>
+                                        <state key="normal" title="Update">
+                                            <color key="titleColor" systemColor="systemGreenColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="updateArticle:" destination="K6D-bW-65R" eventType="touchUpInside" id="ilt-EA-h5V"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kas-nu-cWL">
+                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="45"/>
+                                        <state key="normal" title="Delete">
+                                            <color key="titleColor" systemColor="systemRedColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="deleteArticle:" destination="K6D-bW-65R" eventType="touchUpInside" id="Ems-pL-xUp"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="MJ7-MX-77q"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bQF-Uy-jQC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="oUR-Kk-IbH" firstAttribute="top" secondItem="gab-Qp-uuH" secondAttribute="bottom" constant="16" id="3NE-5p-a5B"/>
+                            <constraint firstItem="Dkr-b4-IT7" firstAttribute="top" secondItem="gab-Qp-uuH" secondAttribute="bottom" constant="16" id="Jys-tt-TiG"/>
+                            <constraint firstItem="bQF-Uy-jQC" firstAttribute="trailing" secondItem="gab-Qp-uuH" secondAttribute="trailing" constant="16" id="LdR-qZ-Evb"/>
+                            <constraint firstItem="bQF-Uy-jQC" firstAttribute="trailing" secondItem="oUR-Kk-IbH" secondAttribute="trailing" constant="16" id="MN2-Xf-bii"/>
+                            <constraint firstItem="gab-Qp-uuH" firstAttribute="leading" secondItem="bQF-Uy-jQC" secondAttribute="leading" constant="16" id="UnG-UL-imO"/>
+                            <constraint firstItem="bQF-Uy-jQC" firstAttribute="trailing" secondItem="Dkr-b4-IT7" secondAttribute="trailing" constant="16" id="Vdw-us-YgG"/>
+                            <constraint firstItem="vo3-X1-E0l" firstAttribute="top" secondItem="oUR-Kk-IbH" secondAttribute="bottom" constant="16" id="VrK-o0-Wdm"/>
+                            <constraint firstItem="bQF-Uy-jQC" firstAttribute="trailing" secondItem="huo-Y3-Tqy" secondAttribute="trailing" constant="16" id="YUZ-bi-iPB"/>
+                            <constraint firstItem="vo3-X1-E0l" firstAttribute="leading" secondItem="bQF-Uy-jQC" secondAttribute="leading" constant="16" id="aPO-An-hCu"/>
+                            <constraint firstItem="huo-Y3-Tqy" firstAttribute="leading" secondItem="bQF-Uy-jQC" secondAttribute="leading" constant="16" id="bXS-7P-06p"/>
+                            <constraint firstItem="gab-Qp-uuH" firstAttribute="top" secondItem="huo-Y3-Tqy" secondAttribute="bottom" constant="16" id="c2W-kE-fFm"/>
+                            <constraint firstItem="bQF-Uy-jQC" firstAttribute="trailing" secondItem="vo3-X1-E0l" secondAttribute="trailing" constant="16" id="fkG-wW-rPy"/>
+                            <constraint firstItem="Dkr-b4-IT7" firstAttribute="leading" secondItem="bQF-Uy-jQC" secondAttribute="leading" constant="16" id="ixg-oz-uBd"/>
+                            <constraint firstItem="Zrl-WZ-7r1" firstAttribute="top" secondItem="bQF-Uy-jQC" secondAttribute="top" constant="16" id="m5a-tt-jIf"/>
+                            <constraint firstItem="Zrl-WZ-7r1" firstAttribute="leading" secondItem="bQF-Uy-jQC" secondAttribute="leading" constant="16" id="oFK-BU-oGY"/>
+                            <constraint firstItem="bQF-Uy-jQC" firstAttribute="bottom" secondItem="vo3-X1-E0l" secondAttribute="bottom" constant="32" id="pKg-HQ-WIT"/>
+                            <constraint firstItem="huo-Y3-Tqy" firstAttribute="top" secondItem="Zrl-WZ-7r1" secondAttribute="bottom" constant="16" id="rtn-Id-rEL"/>
+                            <constraint firstItem="oUR-Kk-IbH" firstAttribute="leading" secondItem="bQF-Uy-jQC" secondAttribute="leading" constant="16" id="z3d-pY-aTR"/>
+                            <constraint firstItem="bQF-Uy-jQC" firstAttribute="trailing" secondItem="Zrl-WZ-7r1" secondAttribute="trailing" constant="16" id="zfH-U7-BKx"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="r2l-oe-SSl"/>
                     <connections>
-                        <outlet property="articlePhoto" destination="2eJ-VF-cor" id="nw1-lc-w6w"/>
+                        <outlet property="actionOnArticleContainer" destination="vo3-X1-E0l" id="7fc-K4-qAh"/>
+                        <outlet property="articleContent" destination="oUR-Kk-IbH" id="pgt-PW-qYc"/>
+                        <outlet property="articleTitle" destination="huo-Y3-Tqy" id="I3A-QW-O5x"/>
+                        <outlet property="deleteButton" destination="Kas-nu-cWL" id="2jQ-oX-w9L"/>
+                        <outlet property="editButton" destination="MXs-EC-Y0D" id="U18-8E-Wig"/>
+                        <outlet property="placeholderHelper" destination="Dkr-b4-IT7" id="5Vm-XG-Ygx"/>
+                        <outlet property="updateButton" destination="Tnt-iL-x6g" id="NHO-e9-dUt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HPw-oH-uHG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1874" y="877"/>
+            <point key="canvasLocation" x="1873.913043478261" y="876.5625"/>
+        </scene>
+        <!--Watches Articles-->
+        <scene sceneID="fyA-US-2V8">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="y8F-on-C7a" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Watches Articles" image="applewatch.watchface" catalog="system" id="HMl-mK-fMU"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="SYe-Sd-1bx">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="yby-4A-9k7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mvm-PB-yx7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="944.92753623188412" y="124.55357142857142"/>
         </scene>
     </scenes>
     <resources>
         <image name="applewatch.watchface" catalog="system" width="114" height="128"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

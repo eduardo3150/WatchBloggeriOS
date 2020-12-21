@@ -17,11 +17,16 @@ class HomeViewController: UIViewController {
         setupTableView()
         refeshTableView(moreItems: false)
 
+        navigationItem.title = "Watches articles"
+
         viewModel?
             .articlesPublished
             .sink(receiveValue: { [weak self] articleMain in
                 guard let `self` = self else { return }
-                self.articlesDataManager.setArticlesData(articles: articleMain.articles, fetchesNextResults: self.fetchesNextResults)
+                self.articlesDataManager.setArticlesData(
+                    articles: articleMain.articles,
+                    fetchesNextResults: self.fetchesNextResults
+                )
                 self.articlesTableView.reloadData()
                 self.refreshControl.endRefreshing()
                 self.fetchesNextResults = false
