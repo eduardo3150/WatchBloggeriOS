@@ -41,7 +41,6 @@ class ArticlesTableDataManager: NSObject, UITableViewDataSource, UITableViewDele
         let maximumOffset = scrollView.contentSize.height - scrollView.frame.size.height
 
         if currentOffset > 0 && maximumOffset - currentOffset <= 10.0 {
-                print("load more stuff")
             delegate?.loadMoreData()
         }
     }

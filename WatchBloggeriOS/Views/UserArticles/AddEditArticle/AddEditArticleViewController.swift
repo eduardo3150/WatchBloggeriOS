@@ -6,8 +6,6 @@ class AddEditArticleViewController: UIViewController {
     @IBOutlet weak var articleContent: UITextView!
     @IBOutlet weak var placeholderHelper: UILabel!
     @IBOutlet weak var actionOnArticleContainer: UIStackView!
-    @IBOutlet weak var updateButton: UIButton!
-    @IBOutlet weak var deleteButton: UIButton!
     @IBOutlet weak var editButton: UIButton!
 
     var viewModel: AddEditArticleViewModelProtocol?
@@ -16,7 +14,7 @@ class AddEditArticleViewController: UIViewController {
         super.viewDidLoad()
 
         let saveArticleButton = UIBarButtonItem(
-            barButtonSystemItem: .done,
+            barButtonSystemItem: .save,
             target: self,
             action: #selector(saveArticle)
         )
@@ -31,21 +29,19 @@ class AddEditArticleViewController: UIViewController {
             self.articleContent.text = userArticle.content
             self.placeholderHelper.isHidden = true
             self.makeViewOnly()
+            let deleteArticleButton = UIBarButtonItem(
+                barButtonSystemItem: .trash,
+                target: self,
+                action: #selector(self.deleteArticleAction)
+            )
+            self.navigationItem.rightBarButtonItems = [saveArticleButton, deleteArticleButton]
         }
     }
 
     @IBAction func editArticle(_ sender: Any) {
         makeEditable()
     }
-
-    @IBAction func updateArticle(_ sender: Any) {
-        self.updateArticle()
-    }
-
-    @IBAction func deleteArticle(_ sender: Any) {
-        self.deleteArticle()
-    }
-
+    
     func makeViewOnly() {
         articleTitle.isEnabled = false
         articleContent.isUserInteractionEnabled = false
@@ -58,8 +54,6 @@ class AddEditArticleViewController: UIViewController {
         articleTitle.isEnabled = true
         articleContent.isUserInteractionEnabled = true
         articleContent.isEditable = true
-        updateButton.isHidden = false
-        deleteButton.isHidden = false
         editButton.isHidden = true
     }
 
@@ -77,11 +71,19 @@ class AddEditArticleViewController: UIViewController {
 
     @objc func saveArticle() {
         if let articleTitle = articleTitle.text,
-           let articleContent = articleContent.text {
-            viewModel?.performArticleAction(title: articleTitle, content: articleContent, action: .add) {
+           let articleContent = articleContent.text, let viewModel = self.viewModel {
+            var action: ArticleAction = .add
+            if case .EDIT = viewModel.viewType {
+                action = .update
+            }
+            viewModel.performArticleAction(title: articleTitle, content: articleContent, action: action) {
                 self.dismissView()
             }
         }
+    }
+    
+    @objc func deleteArticleAction() {
+        self.deleteArticle()
     }
 
     func validateFields() {
@@ -92,15 +94,6 @@ class AddEditArticleViewController: UIViewController {
             enableSaveButton()
         } else {
             disableSaveButton()
-        }
-    }
-
-    func updateArticle() {
-        if let articleTitle = articleTitle.text,
-           let articleContent = articleContent.text {
-            viewModel?.performArticleAction(title: articleTitle, content: articleContent, action: .update) {
-                self.dismissView()
-            }
         }
     }
 

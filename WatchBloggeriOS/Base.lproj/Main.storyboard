@@ -156,24 +156,6 @@
                                             <action selector="editArticle:" destination="K6D-bW-65R" eventType="touchUpInside" id="kwe-YP-UmO"/>
                                         </connections>
                                     </button>
-                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tnt-iL-x6g">
-                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="45"/>
-                                        <state key="normal" title="Update">
-                                            <color key="titleColor" systemColor="systemGreenColor"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="updateArticle:" destination="K6D-bW-65R" eventType="touchUpInside" id="ilt-EA-h5V"/>
-                                        </connections>
-                                    </button>
-                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kas-nu-cWL">
-                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="45"/>
-                                        <state key="normal" title="Delete">
-                                            <color key="titleColor" systemColor="systemRedColor"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="deleteArticle:" destination="K6D-bW-65R" eventType="touchUpInside" id="Ems-pL-xUp"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="MJ7-MX-77q"/>
@@ -209,10 +191,8 @@
                         <outlet property="actionOnArticleContainer" destination="vo3-X1-E0l" id="7fc-K4-qAh"/>
                         <outlet property="articleContent" destination="oUR-Kk-IbH" id="pgt-PW-qYc"/>
                         <outlet property="articleTitle" destination="huo-Y3-Tqy" id="I3A-QW-O5x"/>
-                        <outlet property="deleteButton" destination="Kas-nu-cWL" id="2jQ-oX-w9L"/>
                         <outlet property="editButton" destination="MXs-EC-Y0D" id="U18-8E-Wig"/>
                         <outlet property="placeholderHelper" destination="Dkr-b4-IT7" id="5Vm-XG-Ygx"/>
-                        <outlet property="updateButton" destination="Tnt-iL-x6g" id="NHO-e9-dUt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HPw-oH-uHG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -250,12 +230,6 @@
         </systemColor>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

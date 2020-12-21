@@ -17,6 +17,8 @@ protocol AddEditArticleViewModelProtocol {
     func getViewTypeConfiguration(
         callback: @escaping (UserArticle?) -> Void
     )
+    
+    var viewType: AddEditArticleViewModel.ViewType { get set }
 }
 
 class AddEditArticleViewModel: AddEditArticleViewModelProtocol {
