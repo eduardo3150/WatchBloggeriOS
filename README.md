@@ -21,3 +21,34 @@ Testing stack consist of:
 - [Quick](https://github.com/Quick/Quick.git)
 - [Nimble](https://github.com/Quick/Nimble)
 - [Spry](https://github.com/Rivukis/Spry)
+
+### Linter
+This application uses [Swiftlint](https://github.com/realm/SwiftLint) for code linting, it gets installed once we set up our `pods` and will run `swiftlint` whenever we run the application.
+
+__Recommended__: We can also run
+
+```sh
+./Pods/SwiftLint/swiftlint autocorrect
+```
+
+to have our `swiftlint` correct some warnings and enforce code style.
+
+### xUnique
+
+In order to avoid very complicated merge conflicts, this project works also with [xUnique](https://github.com/truebit/xUnique), please refer to the linked repository to install and follow the steps to use it, the command used for this application is:
+
+```sh
+xunique -s -p WatchBloggeriOS.xcodeproj
+```
+
+This step is optional but if you add a new file or modify the `xcodeproj` file then it is recommended to run `xunique` for consistency.
+
+### Demo
+
+A video demo can be found [here](https://drive.google.com/file/d/1ixzwMB_qznS-QUC9UtnF0KHy3X1jEjwi/view?usp=sharing)
+
+Finally here are some screenshots attached:
+
+![__screenshots__/remote_articles.png](__screenshots__/remote_articles.png)
+
+![__screenshots__/new_article_full.png](__screenshots__/new_article_full.png)
