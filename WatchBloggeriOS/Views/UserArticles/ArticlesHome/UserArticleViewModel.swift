@@ -9,7 +9,6 @@ class UserArticleViewModel: UserArticleViewModelProtocol {
 
     init(userArticleProvider: UserArticlesProviderProtocol) {
         self.userArticleProvider = userArticleProvider
-        print("first article \(userArticleProvider.getArticle(by: "0"))")
     }
 
     func getAllStoredArticles() -> [UserArticle] {
