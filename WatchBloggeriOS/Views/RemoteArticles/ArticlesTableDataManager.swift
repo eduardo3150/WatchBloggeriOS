@@ -1,7 +1,7 @@
 import Foundation
 import UIKit
 
-class ArticlesDataSource: NSObject, UITableViewDataSource, UITableViewDelegate {
+class ArticlesTableDataManager: NSObject, UITableViewDataSource, UITableViewDelegate {
     private var articlesList: [Article] = []
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
