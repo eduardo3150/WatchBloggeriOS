@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		706272DB2590562D00D7CC52 /* AddEditArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706272DA2590562D00D7CC52 /* AddEditArticleViewController.swift */; };
+		706272DF2590563F00D7CC52 /* AddEditArticleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706272DE2590563F00D7CC52 /* AddEditArticleViewModel.swift */; };
 		7085F7D2258FBE8900C74FFA /* ApiProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7085F7D0258FBE8800C74FFA /* ApiProvider.swift */; };
 		7085F7D3258FBE8900C74FFA /* ApiProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7085F7D1258FBE8900C74FFA /* ApiProviderProtocol.swift */; };
 		70A72B1E258CFDAC00A37450 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A72B1D258CFDAC00A37450 /* AppDelegate.swift */; };
@@ -21,6 +23,7 @@
 		64900F488BF2F5F291EA96FD /* Pods_WatchBloggeriOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9A62EF530D209768A1F1AA3 /* Pods_WatchBloggeriOSTests.framework */; };
 		7085F7BD258FBCC900C74FFA /* RemoteArticles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7085F7BC258FBCC900C74FFA /* RemoteArticles.swift */; };
 		70A72B20258CFDAC00A37450 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A72B1F258CFDAC00A37450 /* SceneDelegate.swift */; };
+		7062730A2590D45000D7CC52 /* SegueHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706273092590D45000D7CC52 /* SegueHandler.swift */; };
 		7085F7C2258FBD3400C74FFA /* SwinjectStoryboard+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7085F7C1258FBD3400C74FFA /* SwinjectStoryboard+Extension.swift */; };
 		704D70D42590069E008299C9 /* UserArticleTableDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704D70D32590069E008299C9 /* UserArticleTableDataManager.swift */; };
 		704D70CE259005FB008299C9 /* UserArticleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704D70CD259005FB008299C9 /* UserArticleViewModel.swift */; };
@@ -41,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		706272DA2590562D00D7CC52 /* AddEditArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditArticleViewController.swift; sourceTree = "<group>"; };
+		706272DE2590563F00D7CC52 /* AddEditArticleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditArticleViewModel.swift; sourceTree = "<group>"; };
 		7085F7D0258FBE8800C74FFA /* ApiProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiProvider.swift; sourceTree = "<group>"; };
 		7085F7D1258FBE8900C74FFA /* ApiProviderProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiProviderProtocol.swift; sourceTree = "<group>"; };
 		70A72B1D258CFDAC00A37450 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +69,7 @@
 		E801C0EBFBA021EDC2772B4B /* Pods_WatchBloggeriOS_WatchBloggeriOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WatchBloggeriOS_WatchBloggeriOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7085F7BC258FBCC900C74FFA /* RemoteArticles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteArticles.swift; sourceTree = "<group>"; };
 		70A72B1F258CFDAC00A37450 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		706273092590D45000D7CC52 /* SegueHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueHandler.swift; sourceTree = "<group>"; };
 		7085F7C1258FBD3400C74FFA /* SwinjectStoryboard+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwinjectStoryboard+Extension.swift"; sourceTree = "<group>"; };
 		704D70D32590069E008299C9 /* UserArticleTableDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserArticleTableDataManager.swift; sourceTree = "<group>"; };
 		704D70CD259005FB008299C9 /* UserArticleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserArticleViewModel.swift; sourceTree = "<group>"; };
@@ -111,9 +117,9 @@
 		704D70B2258FE6C1008299C9 /* UserArticles */ = {
 			isa = PBXGroup;
 			children = (
-				704D70D32590069E008299C9 /* UserArticleTableDataManager.swift */,
-				704D70CD259005FB008299C9 /* UserArticleViewModel.swift */,
-				704D70B5258FE7B6008299C9 /* UserArticlesViewController.swift */,
+				706272E22590564800D7CC52 /* AddEditArticle */,
+				706272E52590565B00D7CC52 /* ArticlesHome */,
+				706273062590D3BB00D7CC52 /* TableManager */,
 			);
 			path = UserArticles;
 			sourceTree = "<group>";
@@ -134,6 +140,32 @@
 				704D70C2258FEC9B008299C9 /* UserArticlesProviderProtocol.swift */,
 			);
 			path = LocalProvider;
+			sourceTree = "<group>";
+		};
+		706272E22590564800D7CC52 /* AddEditArticle */ = {
+			isa = PBXGroup;
+			children = (
+				706272DA2590562D00D7CC52 /* AddEditArticleViewController.swift */,
+				706272DE2590563F00D7CC52 /* AddEditArticleViewModel.swift */,
+			);
+			path = AddEditArticle;
+			sourceTree = "<group>";
+		};
+		706272E52590565B00D7CC52 /* ArticlesHome */ = {
+			isa = PBXGroup;
+			children = (
+				704D70CD259005FB008299C9 /* UserArticleViewModel.swift */,
+				704D70B5258FE7B6008299C9 /* UserArticlesViewController.swift */,
+			);
+			path = ArticlesHome;
+			sourceTree = "<group>";
+		};
+		706273062590D3BB00D7CC52 /* TableManager */ = {
+			isa = PBXGroup;
+			children = (
+				704D70D32590069E008299C9 /* UserArticleTableDataManager.swift */,
+			);
+			path = TableManager;
 			sourceTree = "<group>";
 		};
 		7085F7C0258FBD1D00C74FFA /* DI */ = {
@@ -214,6 +246,7 @@
 				70A72B28258CFDAE00A37450 /* LaunchScreen.storyboard */,
 				70A72B23258CFDAC00A37450 /* Main.storyboard */,
 				70A72B1F258CFDAC00A37450 /* SceneDelegate.swift */,
+				706273092590D45000D7CC52 /* SegueHandler.swift */,
 			);
 			path = WatchBloggeriOS;
 			sourceTree = "<group>";
@@ -440,6 +473,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				706272DB2590562D00D7CC52 /* AddEditArticleViewController.swift in Sources */,
+				706272DF2590563F00D7CC52 /* AddEditArticleViewModel.swift in Sources */,
 				7085F7D2258FBE8900C74FFA /* ApiProvider.swift in Sources */,
 				7085F7D3258FBE8900C74FFA /* ApiProviderProtocol.swift in Sources */,
 				70A72B1E258CFDAC00A37450 /* AppDelegate.swift in Sources */,
@@ -449,6 +484,7 @@
 				706272D32590119D00D7CC52 /* LocalArticles.swift in Sources */,
 				7085F7BD258FBCC900C74FFA /* RemoteArticles.swift in Sources */,
 				70A72B20258CFDAC00A37450 /* SceneDelegate.swift in Sources */,
+				7062730A2590D45000D7CC52 /* SegueHandler.swift in Sources */,
 				7085F7C2258FBD3400C74FFA /* SwinjectStoryboard+Extension.swift in Sources */,
 				704D70D42590069E008299C9 /* UserArticleTableDataManager.swift in Sources */,
 				704D70CE259005FB008299C9 /* UserArticleViewModel.swift in Sources */,
