@@ -8,7 +8,12 @@ enum ArticleAction {
 
 protocol AddEditArticleViewModelProtocol {
     func configure(viewType: AddEditArticleViewModel.ViewType)
-    func performArticleAction(title: String, content: String, action: ArticleAction)
+    func performArticleAction(
+        title: String,
+        content: String,
+        action: ArticleAction,
+        callback: @escaping () -> Void
+    )
     func getViewTypeConfiguration(
         callback: @escaping (UserArticle?) -> Void
     )
@@ -36,7 +41,12 @@ class AddEditArticleViewModel: AddEditArticleViewModelProtocol {
         }
     }
 
-    func performArticleAction(title: String, content: String, action: ArticleAction) {
+    func performArticleAction(
+        title: String,
+        content: String,
+        action: ArticleAction,
+        callback: @escaping () -> Void
+    ) {
         switch action {
         case .add:
             let userArticle = UserArticle()
@@ -57,6 +67,7 @@ class AddEditArticleViewModel: AddEditArticleViewModelProtocol {
                 userArticleProvider.deleteArticle(with: existingArticle)
             }
         }
+        callback()
     }
 
     enum ViewType {

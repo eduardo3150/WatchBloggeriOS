@@ -24,7 +24,6 @@ class AddEditArticleViewController: UIViewController {
         disableSaveButton()
         articleContent.delegate = self
         articleTitle.delegate = self
-
         viewModel?.getViewTypeConfiguration { [weak self] userArticle in
             guard let userArticle = userArticle,
                   let `self` = self else { return }
@@ -79,7 +78,9 @@ class AddEditArticleViewController: UIViewController {
     @objc func saveArticle() {
         if let articleTitle = articleTitle.text,
            let articleContent = articleContent.text {
-            viewModel?.performArticleAction(title: articleTitle, content: articleContent, action: .add)
+            viewModel?.performArticleAction(title: articleTitle, content: articleContent, action: .add) {
+                self.dismissView()
+            }
         }
     }
 
@@ -97,12 +98,20 @@ class AddEditArticleViewController: UIViewController {
     func updateArticle() {
         if let articleTitle = articleTitle.text,
            let articleContent = articleContent.text {
-            viewModel?.performArticleAction(title: articleTitle, content: articleContent, action: .update)
+            viewModel?.performArticleAction(title: articleTitle, content: articleContent, action: .update) {
+                self.dismissView()
+            }
         }
     }
 
     func deleteArticle() {
-        viewModel?.performArticleAction(title: "", content: "", action: .delete)
+        viewModel?.performArticleAction(title: "", content: "", action: .delete) {
+            self.dismissView()
+        }
+    }
+
+    func dismissView() {
+        navigationController?.popViewController(animated: true)
     }
 }
 
