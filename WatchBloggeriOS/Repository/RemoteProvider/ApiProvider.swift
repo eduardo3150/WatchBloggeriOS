@@ -2,11 +2,7 @@ import Foundation
 import Alamofire
 
 class ApiProvider: ApiProviderProtocol {
-
-    static let BASE_URL = "https://newsapi.org/v2"
-    static let API_KEY = "fabd60c0bee54a74bd4622c1d0534c41"
-
-    let apiKeyQueryItem = URLQueryItem(name: "apiKey", value: ApiProvider.API_KEY)
+    let apiKeyQueryItem = URLQueryItem(name: "apiKey", value: Constants.API_KEY)
     var page = 1
 
     func getWatchArticles(from: String, with moreData: Bool) -> DataResponsePublisher<WatchArticleResponse> {
@@ -34,7 +30,7 @@ class ApiProvider: ApiProviderProtocol {
         }
         let pageQueryItem = URLQueryItem(name: "page", value: String(page))
         let queryItems = [apiKeyQueryItem, queryItem, fromItem, sortByItem, languageItem, pageSizeItem, pageQueryItem]
-        var urlComps = URLComponents(string: "\(ApiProvider.BASE_URL)/everything")!
+        var urlComps = URLComponents(string: "\(Constants.BASE_URL)/everything")!
         urlComps.queryItems = queryItems
 
         return AF.request(urlComps.url!, method: .get)

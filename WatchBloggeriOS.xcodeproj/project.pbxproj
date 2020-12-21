@@ -14,6 +14,7 @@
 		70A72B1E258CFDAC00A37450 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A72B1D258CFDAC00A37450 /* AppDelegate.swift */; };
 		704D709D258FDC16008299C9 /* ArticlesTableDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704D709C258FDC16008299C9 /* ArticlesTableDataManager.swift */; };
 		70A72B27258CFDAE00A37450 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70A72B26258CFDAE00A37450 /* Assets.xcassets */; };
+		701EA2112591322F00AC48C2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701EA2102591322F00AC48C2 /* Constants.swift */; };
 		70A72B22258CFDAC00A37450 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A72B21258CFDAC00A37450 /* HomeViewController.swift */; };
 		7085F7C8258FBD8800C74FFA /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7085F7C7258FBD8800C74FFA /* HomeViewModel.swift */; };
 		70A72B2A258CFDAE00A37450 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70A72B28258CFDAE00A37450 /* LaunchScreen.storyboard */; };
@@ -56,6 +57,7 @@
 		70A72B26258CFDAE00A37450 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		70A72B24258CFDAC00A37450 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		70A72B29258CFDAE00A37450 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		701EA2102591322F00AC48C2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		70A72B21258CFDAC00A37450 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		7085F7C7258FBD8800C74FFA /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		70A72B2B258CFDAE00A37450 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -275,6 +277,7 @@
 				7085F7C5258FBD5D00C74FFA /* Views */,
 				70A72B1D258CFDAC00A37450 /* AppDelegate.swift */,
 				70A72B26258CFDAE00A37450 /* Assets.xcassets */,
+				701EA2102591322F00AC48C2 /* Constants.swift */,
 				70A72B2B258CFDAE00A37450 /* Info.plist */,
 				70A72B28258CFDAE00A37450 /* LaunchScreen.storyboard */,
 				70A72B23258CFDAC00A37450 /* Main.storyboard */,
@@ -521,6 +524,7 @@
 				7085F7D3258FBE8900C74FFA /* ApiProviderProtocol.swift in Sources */,
 				70A72B1E258CFDAC00A37450 /* AppDelegate.swift in Sources */,
 				704D709D258FDC16008299C9 /* ArticlesTableDataManager.swift in Sources */,
+				701EA2112591322F00AC48C2 /* Constants.swift in Sources */,
 				70A72B22258CFDAC00A37450 /* HomeViewController.swift in Sources */,
 				7085F7C8258FBD8800C74FFA /* HomeViewModel.swift in Sources */,
 				706272D32590119D00D7CC52 /* LocalArticles.swift in Sources */,
