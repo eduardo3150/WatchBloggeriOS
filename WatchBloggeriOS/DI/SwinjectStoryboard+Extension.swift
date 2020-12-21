@@ -29,7 +29,9 @@ extension SwinjectStoryboard {
         // Business logic
         defaultContainer.autoregister(ApiProviderProtocol.self, initializer: ApiProvider.init)
 
-        defaultContainer.autoregister(UserArticlesProviderProtocol.self, initializer: UserArticleProvider.init)
+        defaultContainer.register(UserArticlesProviderProtocol.self) { _ in
+            return UserArticleProvider()
+        }
 
         defaultContainer.autoregister(SegueHandlerProtocol.self, initializer: SegueHandler.init)
     }

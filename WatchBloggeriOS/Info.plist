@@ -20,6 +20,12 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>User created articles allows you to take and attach a picture</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>User created article needs to save pictures taken into your photo library</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>User created articles allows you to attach a picture from your library</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

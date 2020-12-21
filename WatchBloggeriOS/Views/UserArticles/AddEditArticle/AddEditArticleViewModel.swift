@@ -16,7 +16,7 @@ class AddEditArticleViewModel: AddEditArticleViewModelProtocol {
         case .ADD:
             print("add new")
         case .EDIT(let id):
-            let article = userArticleProvider.getArticle(by: id)
+            let article = userArticleProvider.getArticle(with: id)
             print("view \(article)")
         }
     }

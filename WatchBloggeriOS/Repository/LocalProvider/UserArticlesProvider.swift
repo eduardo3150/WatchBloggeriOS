@@ -2,21 +2,23 @@ import Foundation
 import RealmSwift
 
 class UserArticleProvider: UserArticlesProviderProtocol {
+    let realm: Realm
+
+    convenience init() {
+        // swiftlint:disable:next force_try
+        self.init(realm: try! Realm())
+    }
+
+    init(realm: Realm) {
+        self.realm = realm
+      }
 
     func getAllStoredArticles() -> [UserArticle] {
-        do {
-            let realm = try Realm()
-            let result =  realm.objects(UserArticle.self)
-            return Array(result)
-        } catch let error {
-            print("error \(error)")
-        }
-        return []
+        return Array(realm.objects(UserArticle.self))
     }
 
     func saveArticle(data: UserArticle) {
         do {
-            let realm = try Realm()
             try realm.write {
                 realm.add(data)
             }
@@ -25,23 +27,31 @@ class UserArticleProvider: UserArticlesProviderProtocol {
         }
     }
 
-    func updateArticle(updatedData: UserArticle) {
-        // No OP
-    }
-
-    func deleteArticle(with id: String) {
-        // No OP
-    }
-
-    func getArticle(by id: String) -> UserArticle? {
+    func updateArticle(originalArticle: UserArticle, updatedData: TemporalArticle) {
         do {
-            let realm = try Realm()
-            let result = realm.object(ofType: UserArticle.self, forPrimaryKey: id)
-            return result
+            try realm.write {
+                originalArticle.title = updatedData.title
+                originalArticle.content = updatedData.content
+                originalArticle.image = updatedData.image
+            }
         } catch let error {
             print("error \(error)")
         }
-        return nil
+    }
+
+    func deleteArticle(with data: UserArticle) {
+        do {
+            try realm.write {
+                realm.delete(data)
+            }
+        } catch let error {
+            print("error \(error)")
+        }
+    }
+
+    func getArticle(with id: String) -> UserArticle? {
+        let result = realm.object(ofType: UserArticle.self, forPrimaryKey: id)
+        return result
     }
 
     func seedFakeData() {
